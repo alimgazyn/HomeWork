@@ -25,9 +25,11 @@ public class ContactBook <T extends Contact>{
         if (contact.getName().equals(name)) {
             System.out.println("Поздравим с Новым годом ваш контакт из записной книжки: " + name);
             contact.sendMessage();
-        } else
-            System.out.println("Не найден контакт с указанным именем.");
+        }
 
+        if (!contactPresented) {
+            System.out.println("Не найден контакт с указанным именем.");
+        }
         // Если контакт не найден, выведите соответсвующее сообщение
 
     }
